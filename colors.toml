@@ -22,6 +22,10 @@ accent = "#ab92fc"
 active_border_color = "#ab92fc"
 active_tab_background = "#ab92fc"
 
+# Quattro shares these gradients between Hyprland and shell surfaces.
+hyprland_active_border = "rgb(ab92fc) rgb(875faf) 90deg"
+hyprland_inactive_border = "rgba(e6bb85aa) rgba(d99145bb) 90deg"
+
 cursor = "#ccd2d9"
 
 foreground = "#ccd2d9"
