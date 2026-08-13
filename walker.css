@@ -1,40 +1,38 @@
-/*
-*    ASCII art by:
-*    x@xero.style    _            ____
-*    https://x-e.ro : \           |   \    .
-*                   |  \ .        |    :   |\            /\
-*                .  |   :|\__     |    |   | \          /  \
-*   .            |\ |   |! \ \    |    |   | |\        /   /
-*   \"-.______   | \:   ||\ \ \   |    |   | | \      /   /
-*    \_       "-_|  |\  || \ \/   |    |___| ! |\____/  _/-. /\
-*      "-_   ____:  |_\ ||  \/  ___\  __  _//  | |  ___ \---" /
-*         \  \   |  _____,  /___\___\/ / /   \_! |  // _/  / /
-*       ___\_ \__|  |    | __. _/____ / /     /  > // /    \/
-*     //_________|  /    |/  |/  \__// /     /  /_/ \/
-*                | /     |   :      | /     /__/
-*                |/                 |/   E V A N G E L I O N
-*  
-*   Based on the evangelion.nvim colorschme by xero
-*/
+/*                  _             ____ */
+/*                  |\            |   \    . */
+/*                  |  \ .        |    :   |\            /\ */
+/*               .  |   :|\__     |    |   | \          /  \ */
+/*  .            |\ |   |! \ \    |    |   | |\        /   / */
+/*  \"-.______   | \:   ||\ \ \   |    |   | | \      /   / */
+/*   \_       "-_|  |\  || \ \/   |    |___| ! |\____/  _/-. /\ */
+/*     "-_   ____:  |_\ ||  \/  ___\  __  _//  | |  ___ \---" / */
+/*        \  \   |  _____,  /___\___\/ / /   \_! |  // _/  / / */
+/*      ___\_ \__|  |    | __. _/____ / /     /  > // /    \/ */
+/*    //_________|  /    |/  |/  \__// /     /  /_/ \/ */
+/*               | /     |   :      | /     /__/ */
+/*               |/                 |/   E V A N G E L I O N */
+/*  */
 
+@define-color selected-text #E1D6F8;
+@define-color text #A1A0AD;
+@define-color base #201430;
+@define-color border #AB92FC;
+@define-color foreground #E1D6F8;
+@define-color background #201430;
 
-@define-color selected-text #d99145;
-@define-color text #ccd2d9;
-@define-color base #1e142e;
-@define-color border #ab92fc;
-@define-color foreground #ccd2d9;
-@define-color background #1e142e;
+window {
+  background-color: transparent;
+  color: @text;
+  border: none;
+  padding: 0;
+  box-shadow: none;
+}
 
-/*
-*      ____  __    __                    
-*     / __ \/ /___/ /                    
-*    / / / / / __  /                     
-*   / /_/ / / /_/ /                      
-*   \____/_/\__,_/ __          __        
-*         / /___  / /_  ____  / /_  ____ 
-*    __  / / __ \/ __ \/ __ \/ __ \/ __ \
-*   / /_/ / /_/ / /_/ / /_/ / /_/ / /_/ /
-*   \____/\____/_.___/\____/_.___/\____/ 
-*                                        
-* 2-3-26
-*/
+window .box-wrapper {
+  border-radius: 0;
+  border: 3px solid @border;
+  padding: 16px 20px;
+  background: alpha(@base, 0.94);
+  background-clip: padding-box;
+  box-shadow: 0 10px 24px rgba(16, 16, 16, 0.85);
+}

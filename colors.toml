@@ -1,64 +1,87 @@
-#  ASCII art by:
-#  x@xero.style    _            ____
-#  https://x-e.ro : \           |   \    .
-#                 |  \ .        |    :   |\            /\
-#              .  |   :|\__     |    |   | \          /  \
-# .            |\ |   |! \ \    |    |   | |\        /   /
-# \"-.______   | \:   ||\ \ \   |    |   | | \      /   /
-#  \_       "-_|  |\  || \ \/   |    |___| ! |\____/  _/-. /\
-#    "-_   ____:  |_\ ||  \/  ___\  __  _//  | |  ___ \---" /
-#       \  \   |  _____,  /___\___\/ / /   \_! |  // _/  / /
-#     ___\_ \__|  |    | __. _/____ / /     /  > // /    \/
-#   //_________|  /    |/  |/  \__// /     /  /_/ \/
-#              | /     |   :      | /     /__/
-#              |/                 |/   E V A N G E L I O N
+#                  _             ____
+#                  |\            |   \    .
+#                  |  \ .        |    :   |\            /\
+#               .  |   :|\__     |    |   | \          /  \
+#  .            |\ |   |! \ \    |    |   | |\        /   /
+#  \"-.______   | \:   ||\ \ \   |    |   | | \      /   /
+#   \_       "-_|  |\  || \ \/   |    |___| ! |\____/  _/-. /\
+#     "-_   ____:  |_\ ||  \/  ___\  __  _//  | |  ___ \---" /
+#        \  \   |  _____,  /___\___\/ / /   \_! |  // _/  / /
+#      ___\_ \__|  |    | __. _/____ / /     /  > // /    \/
+#    //_________|  /    |/  |/  \__// /     /  /_/ \/
+#               | /     |   :      | /     /__/
+#               |/                 |/   E V A N G E L I O N
 #
-# Based on the evangelion.nvim colorschme by xero
-#
-# ------------------------------------------------------------
 
+# Canonical Unit 01 palette from evangelion.nvim.
+# ANSI 0-15 follow Neovim's terminal_color_* map. Quattro UI roles are
+# set explicitly so Omarchy does not alias lime, lilac, or gold off the
+# terminal slots.
 
-accent = "#ab92fc"
-active_border_color = "#ab92fc"
-active_tab_background = "#ab92fc"
+mode = "dark"
+accent = "#AB92FC"
+active_border_color = "#AB92FC"
+active_tab_background = "#AB92FC"
 
 # Quattro shares these gradients between Hyprland and shell surfaces.
-hyprland_active_border = "rgb(ab92fc) rgb(875faf) 90deg"
-hyprland_inactive_border = "rgba(e6bb85aa) rgba(d99145bb) 90deg"
+hyprland_active_border = "rgb(AB92FC) rgb(875FAF) 90deg"
+hyprland_inactive_border = "rgba(E6BB85aa) rgba(D99145bb) 90deg"
 
-cursor = "#ccd2d9"
+# Neovim Cursor is LCL orange. Omarchy's resolver overwrites `cursor` to
+# bright_fg for generated templates; shipped terminals keep the LCL cursor.
+cursor = "#D99145"
 
-foreground = "#ccd2d9"
-background = "#1e142e"
+# Neovim Normal
+foreground = "#E1D6F8"
+background = "#201430"
 
-selection_foreground = "#1e142e"
-selection_background = "#ab92fc"
+# Neovim Visual for terminal selection. UI selection stays a raised violet.
+selection_foreground = "#222222"
+selection_background = "#8EDF5F"
 
-color0 = "#1e142e"
-color1 = "#a1a0ad"
-color2 = "#e6bb85"
-color3 = "#87ff5f"
-color4 = "#ab92fc"
-color5 = "#a4d2ec"
-color6 = "#ce67f0"
-color7 = "#875faf"
-color8 = "#d99145"
-color9 = "#a1a0ad"
-color10 = "#e6bb85"
-color11 = "#87ff5f"
-color12 = "#ab92fc"
-color13 = "#a4d2ec"
-color14 = "#ce67f0"
-color15 = "#ccd2d9"
+# Neovim terminal_color_0 through terminal_color_14.
+# color7/color15 are unset in Neovim; extras use Shinji-adjacent gray and Rei.
+# color8 uses extras Shinji instead of Neovim tokyo3 (#111111), which is darker
+# than color0 and breaks ANSI bright-black.
+color0 = "#201430"
+color1 = "#BF2D2D"
+color2 = "#8EDF5F"
+color3 = "#D99145"
+color4 = "#CE67F0"
+color5 = "#875FAF"
+color6 = "#9DAFD1"
+color7 = "#E1D6F8"
+color8 = "#A1A0AD"
+color9 = "#DB6088"
+color10 = "#87FF5F"
+color11 = "#E6BB85"
+color12 = "#B968FC"
+color13 = "#AB92FC"
+color14 = "#A4D2EC"
+color15 = "#E1D6F8"
 
-#    ____  __    __                    
-#   / __ \/ /___/ /                    
-#  / / / / / __  /                     
-# / /_/ / / /_/ /                      
-# \____/_/\__,_/ __          __        
-#       / /___  / /_  ____  / /_  ____ 
-#  __  / / __ \/ __ \/ __ \/ __ \/ __ \
-# / /_/ / /_/ / /_/ / /_/ / /_/ / /_/ /
-# \____/\____/_.___/\____/_.___/\____/ 
-#                                      
-# 2-3-26
+# Omarchy Quattro semantic roles. These are UI jobs, not ANSI mirrors.
+bg = "#201430"
+lighter_bg = "#39274D"
+selection = "#402C56"
+muted = "#A1A0AD"
+dark_fg = "#A1A0AD"
+fg = "#E1D6F8"
+light_fg = "#D4D4D4"
+bright_fg = "#E1D6F8"
+red = "#BF2D2D"
+green = "#87FF5F"
+yellow = "#E6BB85"
+blue = "#AB92FC"
+magenta = "#CE67F0"
+cyan = "#A4D2EC"
+orange = "#D99145"
+brown = "#D99145"
+dark_bg = "#14091E"
+darker_bg = "#101010"
+bright_red = "#DB6088"
+bright_green = "#87FF5F"
+bright_yellow = "#E6BB85"
+bright_blue = "#B968FC"
+bright_magenta = "#AB92FC"
+bright_cyan = "#A4D2EC"

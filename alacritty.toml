@@ -1,47 +1,68 @@
+#                  _             ____
+#                  |\            |   \    .
+#                  |  \ .        |    :   |\            /\
+#               .  |   :|\__     |    |   | \          /  \
+#  .            |\ |   |! \ \    |    |   | |\        /   /
+#  \"-.______   | \:   ||\ \ \   |    |   | | \      /   /
+#   \_       "-_|  |\  || \ \/   |    |___| ! |\____/  _/-. /\
+#     "-_   ____:  |_\ ||  \/  ___\  __  _//  | |  ___ \---" /
+#        \  \   |  _____,  /___\___\/ / /   \_! |  // _/  / /
+#      ___\_ \__|  |    | __. _/____ / /     /  > // /    \/
+#    //_________|  /    |/  |/  \__// /     /  /_/ \/
+#               | /     |   :      | /     /__/
+#               |/                 |/   E V A N G E L I O N
+#
+
+[window]
+opacity = 0.92
+
+[colors]
+transparent_background_colors = true
+
 [colors.primary]
-background = "#1e142e"
-foreground = "#ccd2d9"
+background = "#201430"
+foreground = "#E1D6F8"
 
 [colors.cursor]
-text = "#1e142e"
-cursor = "#ccd2d9"
+text = "#222222"
+cursor = "#D99145"
 
 [colors.vi_mode_cursor]
-text = "#1e142e"
-cursor = "#ccd2d9"
+text = "#222222"
+cursor = "#D99145"
 
 [colors.search.matches]
-foreground = "#1e142e"
-background = "#87ff5f"
+foreground = "#201430"
+background = "#E6BB85"
 
 [colors.search.focused_match]
-foreground = "#1e142e"
-background = "#a1a0ad"
+foreground = "#201430"
+background = "#DB6088"
 
 [colors.footer_bar]
-foreground = "#1e142e"
-background = "#ccd2d9"
+foreground = "#201430"
+background = "#E1D6F8"
 
 [colors.selection]
-text = "#1e142e"
-background = "#ab92fc"
+text = "#222222"
+background = "#8EDF5F"
 
 [colors.normal]
-black = "#1e142e"
-red = "#a1a0ad"
-green = "#e6bb85"
-yellow = "#87ff5f"
-blue = "#ab92fc"
-magenta = "#a4d2ec"
-cyan = "#ce67f0"
-white = "#875faf"
+black = "#201430"
+red = "#BF2D2D"
+green = "#8EDF5F"
+yellow = "#D99145"
+blue = "#CE67F0"
+magenta = "#875FAF"
+cyan = "#9DAFD1"
+white = "#E1D6F8"
 
 [colors.bright]
-black = "#d99145"
-red = "#a1a0ad"
-green = "#e6bb85"
-yellow = "#87ff5f"
-blue = "#ab92fc"
-magenta = "#a4d2ec"
-cyan = "#ce67f0"
-white = "#ccd2d9"
+black = "#A1A0AD"
+red = "#DB6088"
+green = "#87FF5F"
+yellow = "#E6BB85"
+blue = "#B968FC"
+magenta = "#AB92FC"
+cyan = "#A4D2EC"
+white = "#E1D6F8"

@@ -1,33 +1,48 @@
+/*                  _             ____ */
+/*                  |\            |   \    . */
+/*                  |  \ .        |    :   |\            /\ */
+/*               .  |   :|\__     |    |   | \          /  \ */
+/*  .            |\ |   |! \ \    |    |   | |\        /   / */
+/*  \"-.______   | \:   ||\ \ \   |    |   | | \      /   / */
+/*   \_       "-_|  |\  || \ \/   |    |___| ! |\____/  _/-. /\ */
+/*     "-_   ____:  |_\ ||  \/  ___\  __  _//  | |  ___ \---" / */
+/*        \  \   |  _____,  /___\___\/ / /   \_! |  // _/  / / */
+/*      ___\_ \__|  |    | __. _/____ / /     /  > // /    \/ */
+/*    //_________|  /    |/  |/  \__// /     /  /_/ \/ */
+/*               | /     |   :      | /     /__/ */
+/*               |/                 |/   E V A N G E L I O N */
+/*  */
+
 /**
  * Aether Theme with Sharp Corners (Hyprland-inspired)
  * GTK4/Adwaita Custom Styling
  */
 
 /* Dynamic color palette from Aether */
-@define-color background #1e142e;
-@define-color foreground #ccd2d9;
+@define-color background #201430;
+@define-color foreground #E1D6F8;
 
-@define-color black #1e142e;
-@define-color red #a1a0ad;
-@define-color green #e6bb85;
-@define-color yellow #87ff5f;
-@define-color blue #ab92fc;
-@define-color magenta #a4d2ec;
-@define-color cyan #ce67f0;
-@define-color white #875faf;
-@define-color bright_black #d99145;
-@define-color bright_red #a1a0ad;
-@define-color bright_green #e6bb85;
-@define-color bright_yellow #87ff5f;
-@define-color bright_blue #ab92fc;
-@define-color bright_magenta #a4d2ec;
-@define-color bright_cyan #ce67f0;
-@define-color bright_white #ccd2d9;
+@define-color black #201430;
+@define-color red #BF2D2D;
+@define-color green #87FF5F;
+@define-color yellow #E6BB85;
+@define-color blue #AB92FC;
+@define-color magenta #CE67F0;
+@define-color cyan #A4D2EC;
+@define-color white #E1D6F8;
+@define-color bright_black #A1A0AD;
+@define-color bright_red #DB6088;
+@define-color bright_green #87FF5F;
+@define-color bright_yellow #E6BB85;
+@define-color bright_blue #B968FC;
+@define-color bright_magenta #AB92FC;
+@define-color bright_cyan #A4D2EC;
+@define-color bright_white #E1D6F8;
 
 /* Adwaita Color Overrides */
 @define-color accent_bg_color @blue;
 @define-color accent_fg_color @background;
-@define-color accent_color @cyan;
+@define-color accent_color @blue;
 
 @define-color window_bg_color @background;
 @define-color window_fg_color @foreground;
@@ -50,7 +65,7 @@
 @define-color popover_bg_color @black;
 @define-color popover_fg_color @foreground;
 
-@define-color destructive_bg_color @red;
+@define-color destructive_bg_color @bright_red;
 @define-color destructive_fg_color @background;
 
 @define-color success_bg_color @green;
@@ -59,7 +74,7 @@
 @define-color warning_bg_color @yellow;
 @define-color warning_fg_color @background;
 
-@define-color error_bg_color @red;
+@define-color error_bg_color @bright_red;
 @define-color error_fg_color @background;
 
 @define-color dialog_bg_color @background;
@@ -86,9 +101,9 @@
 @define-color unfocused_insensitive_color @bright_black;
 @define-color unfocused_borders alpha(@foreground, 0.1);
 @define-color warning_color @yellow;
-@define-color error_color @red;
+@define-color error_color @bright_red;
 @define-color success_color @green;
-@define-color destructive_color @red;
+@define-color destructive_color @bright_red;
 
 /* Content View Colors */
 @define-color content_view_bg @black;
@@ -174,11 +189,10 @@ toast {
 
 toast button.circular.flat.image-button:hover {
     color: @background;
-    background-color: @red;
+    background-color: @bright_red;
 }
 
 /* Sharp corners, Hyprland-inspired */
 * {
     border-radius: 0;
 }
-

@@ -1,37 +1,50 @@
-@define-color bg #1e142e;
-@define-color fg #ccd2d9;
-@define-color gray1 #e6bb85;
-@define-color gray2 #d99145;
-@define-color gray3 #ab92fc;
-@define-color gray4 #87ff5f;
-@define-color gray5 #a4d2ec;
-@define-color fg_bright #ccd2d9;
+/*                  _             ____ */
+/*                  |\            |   \    . */
+/*                  |  \ .        |    :   |\            /\ */
+/*               .  |   :|\__     |    |   | \          /  \ */
+/*  .            |\ |   |! \ \    |    |   | |\        /   / */
+/*  \"-.______   | \:   ||\ \ \   |    |   | | \      /   / */
+/*   \_       "-_|  |\  || \ \/   |    |___| ! |\____/  _/-. /\ */
+/*     "-_   ____:  |_\ ||  \/  ___\  __  _//  | |  ___ \---" / */
+/*        \  \   |  _____,  /___\___\/ / /   \_! |  // _/  / / */
+/*      ___\_ \__|  |    | __. _/____ / /     /  > // /    \/ */
+/*    //_________|  /    |/  |/  \__// /     /  /_/ \/ */
+/*               | /     |   :      | /     /__/ */
+/*               |/                 |/   E V A N G E L I O N */
+/*  */
+
+@define-color bg #201430;
+@define-color fg #E1D6F8;
+@define-color muted #A1A0AD;
+@define-color accent #AB92FC;
+@define-color selection #402C56;
+@define-color fg_bright #E1D6F8;
 
 window {
     background-color: @bg;
-    border: 2px solid @gray3;
+    border: 2px solid @accent;
 }
 
 input {
     background-color: @bg;
     color: @fg;
-    border: 1px solid @gray2;
+    border: 1px solid @accent;
 }
 
 input:selected {
-    background-color: @gray1;
+    background-color: @selection;
     color: @fg_bright;
 }
 
 #entry {
-    color: @fg;
+    color: @muted;
     background-color: @bg;
     padding: 5px;
     margin: 2px;
 }
 
 #entry:selected {
-    background-color: @gray1;
+    background-color: @selection;
     color: @fg_bright;
 }
 
@@ -40,10 +53,10 @@ scrollbar {
 }
 
 scrollbar slider {
-    background-color: @gray2;
-    border-radius: 5px;
+    background-color: @muted;
+    border-radius: 0;
 }
 
 scrollbar slider:hover {
-    background-color: @gray3;
+    background-color: @accent;
 }

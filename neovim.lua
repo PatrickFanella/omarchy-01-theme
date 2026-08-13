@@ -1,3 +1,18 @@
+--                  _             ____
+--                  |\            |   \    .
+--                  |  \ .        |    :   |\            /\
+--               .  |   :|\__     |    |   | \          /  \
+--  .            |\ |   |! \ \    |    |   | |\        /   /
+--  \"-.______   | \:   ||\ \ \   |    |   | | \      /   /
+--   \_       "-_|  |\  || \ \/   |    |___| ! |\____/  _/-. /\
+--     "-_   ____:  |_\ ||  \/  ___\  __  _//  | |  ___ \---" /
+--        \  \   |  _____,  /___\___\/ / /   \_! |  // _/  / /
+--      ___\_ \__|  |    | __. _/____ / /     /  > // /    \/
+--    //_________|  /    |/  |/  \__// /     /  /_/ \/
+--               | /     |   :      | /     /__/
+--               |/                 |/   E V A N G E L I O N
+--
+
 return {
 	{
 		"xero/evangelion.nvim",
@@ -32,35 +47,35 @@ return {
 --             transparent = false,
 --             colors = {
 --                 -- Background colors
---                 bg = "#1e142e",
---                 bg_dark = "#1e142e",
---                 bg_highlight = "#d99145",
+--                 bg = "#201430",
+--                 bg_dark = "#14091E",
+--                 bg_highlight = "#402C56",
 --
 --                 -- Foreground colors
 --                 -- fg: Object properties, builtin types, builtin variables, member access, default text
---                 fg = "#ccd2d9",
+--                 fg = "#E1D6F8",
 --                 -- fg_dark: Inactive elements, statusline, secondary text
---                 fg_dark = "#875faf",
+--                 fg_dark = "#A1A0AD",
 --                 -- comment: Line highlight, gutter elements, disabled states
---                 comment = "#d99145",
+--                 comment = "#A1A0AD",
 --
 --                 -- Accent colors
 --                 -- red: Errors, diagnostics, tags, deletions, breakpoints
---                 red = "#a1a0ad",
+--                 red = "#BF2D2D",
 --                 -- orange: Constants, numbers, current line number, git modifications
---                 orange = "#a1a0ad",
+--                 orange = "#D99145",
 --                 -- yellow: Types, classes, constructors, warnings, numbers, booleans
---                 yellow = "#87ff5f",
+--                 yellow = "#E6BB85",
 --                 -- green: Comments, strings, success states, git additions
---                 green = "#e6bb85",
+--                 green = "#87FF5F",
 --                 -- cyan: Parameters, regex, preprocessor, hints, properties
---                 cyan = "#ce67f0",
+--                 cyan = "#A4D2EC",
 --                 -- blue: Functions, keywords, directories, links, info diagnostics
---                 blue = "#ab92fc",
+--                 blue = "#AB92FC",
 --                 -- purple: Storage keywords, special keywords, identifiers, namespaces
---                 purple = "#a4d2ec",
+--                 purple = "#CE67F0",
 --                 -- magenta: Function declarations, exception handling, tags
---                 magenta = "#a4d2ec",
+--                 magenta = "#CE67F0",
 --             },
 --         },
 --         config = function(_, opts)

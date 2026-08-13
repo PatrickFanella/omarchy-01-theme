@@ -1,10 +1,25 @@
-@define-color eva-core #1e142e;
-@define-color eva-shell #1e142e;
-@define-color eva-accent #ab92fc;
-@define-color eva-neon #87ff5f;
-@define-color eva-warning #d99145;
-@define-color eva-text #ccd2d9;
-@define-color eva-muted #a1a0ad;
+/*                  _             ____ */
+/*                  |\            |   \    . */
+/*                  |  \ .        |    :   |\            /\ */
+/*               .  |   :|\__     |    |   | \          /  \ */
+/*  .            |\ |   |! \ \    |    |   | |\        /   / */
+/*  \"-.______   | \:   ||\ \ \   |    |   | | \      /   / */
+/*   \_       "-_|  |\  || \ \/   |    |___| ! |\____/  _/-. /\ */
+/*     "-_   ____:  |_\ ||  \/  ___\  __  _//  | |  ___ \---" / */
+/*        \  \   |  _____,  /___\___\/ / /   \_! |  // _/  / / */
+/*      ___\_ \__|  |    | __. _/____ / /     /  > // /    \/ */
+/*    //_________|  /    |/  |/  \__// /     /  /_/ \/ */
+/*               | /     |   :      | /     /__/ */
+/*               |/                 |/   E V A N G E L I O N */
+/*  */
+
+@define-color eva-core #201430;
+@define-color eva-shell #201430;
+@define-color eva-accent #AB92FC;
+@define-color eva-neon #87FF5F;
+@define-color eva-warning #D99145;
+@define-color eva-text #E1D6F8;
+@define-color eva-muted #A1A0AD;
 
 
 

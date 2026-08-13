@@ -1,3 +1,17 @@
+/*                  _             ____ */
+/*                  |\            |   \    . */
+/*                  |  \ .        |    :   |\            /\ */
+/*               .  |   :|\__     |    |   | \          /  \ */
+/*  .            |\ |   |! \ \    |    |   | |\        /   / */
+/*  \"-.______   | \:   ||\ \ \   |    |   | | \      /   / */
+/*   \_       "-_|  |\  || \ \/   |    |___| ! |\____/  _/-. /\ */
+/*     "-_   ____:  |_\ ||  \/  ___\  __  _//  | |  ___ \---" / */
+/*        \  \   |  _____,  /___\___\/ / /   \_! |  // _/  / / */
+/*      ___\_ \__|  |    | __. _/____ / /     /  > // /    \/ */
+/*    //_________|  /    |/  |/  \__// /     /  /_/ \/ */
+/*               | /     |   :      | /     /__/ */
+/*               |/                 |/   E V A N G E L I O N */
+/*  */
 
 /**
 * @name 01 Discord
@@ -9,44 +23,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap");
 
 :root {
-  /* Horizon Dark palette */
-  --color00: #1e142e;
-  --color01: #a1a0ad;
-  --color02: #e6bb85;
-  --color03: #87ff5f;
-  --color04: #ab92fc;
-  --color05: #a4d2ec;
-  --color06: #ce67f0;
-  --color07: #875faf;
-  --color08: #d99145;
-  --color09: #a1a0ad;
-  --color10: #e6bb85;
-  --color11: #87ff5f;
-  --color12: #ab92fc;
-  --color13: #a4d2ec;
-  --color14: #ce67f0;
-  --color15: #ccd2d9;
+  /* Unit 01 palette */
+  --color00: #201430;
+  --color01: #BF2D2D;
+  --color02: #8EDF5F;
+  --color03: #D99145;
+  --color04: #CE67F0;
+  --color05: #875FAF;
+  --color06: #9DAFD1;
+  --color07: #CCD2D9;
+  --color08: #A1A0AD;
+  --color09: #DB6088;
+  --color10: #87FF5F;
+  --color11: #E6BB85;
+  --color12: #B968FC;
+  --color13: #AB92FC;
+  --color14: #A4D2EC;
+  --color15: #E1D6F8;
 
   /* Item color mapping */
   /* Surfaces */
-  --item-surface-0: var(--color00);
-  --item-surface-1: var(--color00);
-  --item-surface-2: var(--color07);
-  --item-surface-3: var(--color07);
-  --item-surface-4: var(--color07);
+  --item-surface-0: #201430;
+  --item-surface-1: #201430;
+  --item-surface-2: #39274D;
+  --item-surface-3: #402C56;
+  --item-surface-4: #402C56;
 
   /* Text */
-  --item-text: var(--color04);
-  --item-text-muted: var(--color07);
+  --item-text: var(--color15);
+  --item-text-muted: var(--color08);
   --item-text-contrast: var(--color15);
   --item-text-inverse: var(--item-surface-1);
 
   /* Accents & states */
-  --item-accent: var(--color03);
-  --item-accent-strong: var(--color14);
-  --item-danger: var(--color01);
-  --item-highlight: var(--color13);
-  --item-unread: var(--color12);
+  --item-accent: var(--color13);
+  --item-accent-strong: var(--color12);
+  --item-danger: var(--color09);
+  --item-warning: var(--color11);
+  --item-success: var(--color10);
+  --item-highlight: var(--color10);
+  --item-unread: var(--color10);
 
   /* Mention glow */
   --item-mention-glow-1: var(--color05);
@@ -154,8 +170,8 @@
   --button-filled-brand-background-hover: color-mix(in srgb, var(--item-accent) 75%, var(--item-surface-1)) !important;
   --button-filled-brand-text: var(--item-text-inverse) !important;
 
-  --button-positive-background: color-mix(in srgb, var(--item-accent) 65%, var(--item-surface-1)) !important;
-  --button-positive-background-hover: color-mix(in srgb, var(--item-accent) 75%, var(--item-surface-1)) !important;
+  --button-positive-background: color-mix(in srgb, var(--item-success) 72%, var(--item-surface-1)) !important;
+  --button-positive-background-hover: color-mix(in srgb, var(--item-success) 82%, var(--item-surface-1)) !important;
   --button-positive-text: var(--item-text-inverse) !important;
 
   --button-secondary-background: var(--item-surface-3) !important;
@@ -167,8 +183,8 @@
   --button-danger-text: var(--item-text-inverse) !important;
 
   /* Status */
-  --status-positive: var(--item-accent) !important;
-  --status-warning: var(--item-accent) !important;
+  --status-positive: var(--item-success) !important;
+  --status-warning: var(--item-warning) !important;
   --status-danger: var(--item-danger) !important;
 }
 
@@ -209,42 +225,67 @@ a[data-list-item-id^="channels___"] svg path {
   color: var(--item-accent-dim) !important;
 }
 
-/*--- Channel Name Base (no unread / not selected) ---*/
-a[data-list-item-id^="channels___"]:not([class*="modeUnread"]):not([aria-selected="true"]) [class*="name"],
-a[data-list-item-id^="channels___"]:not([class*="modeUnread"]):not([aria-selected="true"]) [class*="name"] * {
+/*--- Idle Channel Names ---
+   Visual Refresh keeps unread/selected on the row wrapper, not the <a>. */
+[class*="wrapper"][class*="modeDefault"] [class*="name"],
+[class*="wrapper"][class*="modeDefault"] [class*="name"] * {
   color: var(--item-channel-name) !important;
   opacity: 0.55 !important;
 }
 
-/* Vesktop/Vencord (name__2ea32) */
-a[data-list-item-id^="channels___"]:not([class*="modeUnread"]):not([aria-selected="true"]) .name__2ea32,
-a[data-list-item-id^="channels___"]:not([class*="modeUnread"]):not([aria-selected="true"]) .name__2ea32 * {
-  color: var(--item-channel-name) !important;
-  opacity: 0.55 !important;
+/* Force Discord's own name tokens on unread rows. */
+[class*="wrapper"]:is([class*="modeUnread"], [class*="modeUnreadImportant"]),
+[class*="wrapper"]:has(> [class*="unread"]),
+[class*="wrapper"]:has([class*="unreadImportant"]) {
+  --channels-default: var(--item-channel-name-unread) !important;
+  --channels-default-unread: var(--item-channel-name-unread) !important;
+  --interactive-normal: var(--item-channel-name-unread) !important;
+  --interactive-muted: var(--item-channel-name-unread) !important;
+  --text-muted: var(--item-channel-name-unread) !important;
+  color: var(--item-channel-name-unread) !important;
 }
 
-li[class*="containerDefault"]:not([class*="modeUnread"]):not([class*="selected"]):not([class*="modeSelected"]) [class*="name"],
-li[class*="containerDefault"]:not([class*="modeUnread"]):not([class*="selected"]):not([class*="modeSelected"]) [class*="name"] * {
-  color: var(--item-channel-name) !important;
-  opacity: 0.55 !important;
-}
-
-/* Vesktop channel list fallback */
-#channels [class*="name__"] {
-  color: var(--item-channel-name) !important;
-  opacity: 0.55 !important;
-}
-
-#channels [class*="modeUnread"] [class*="name__"] {
+/*--- Unread Channel Names ---*/
+[class*="wrapper"]:is([class*="modeUnread"], [class*="modeUnreadImportant"]) [class*="name"],
+[class*="wrapper"]:is([class*="modeUnread"], [class*="modeUnreadImportant"]) [class*="name"] *,
+[class*="wrapper"]:is([class*="modeUnread"], [class*="modeUnreadImportant"]) [class*="link"],
+[class*="wrapper"]:has(> [class*="unread"]) [class*="name"],
+[class*="wrapper"]:has(> [class*="unread"]) [class*="name"] *,
+[class*="wrapper"]:has([class*="unreadImportant"]) [class*="name"],
+[class*="wrapper"]:has([class*="unreadImportant"]) [class*="name"] *,
+[class*="modeUnread"] [class*="name"],
+[class*="modeUnread"] [class*="name"] *,
+[class*="modeUnreadImportant"] [class*="name"],
+[class*="modeUnreadImportant"] [class*="name"] * {
   color: var(--item-channel-name-unread) !important;
   opacity: 1 !important;
-  font-weight: 600 !important;<span class="mention wrapper_f61d60 interactive" aria-expanded="false" tabindex="0" role="button">@HANCORE</span>
+  font-weight: 600 !important;
 }
 
-#channels [class*="selected"] [class*="name__"],
-#channels [class*="modeSelected"] [class*="name__"] {
+[class*="wrapper"]:is([class*="modeSelected"], [class*="selected"], [aria-selected="true"]) [class*="name"],
+[class*="wrapper"]:is([class*="modeSelected"], [class*="selected"], [aria-selected="true"]) [class*="name"] * {
   color: var(--item-channel-name-selected) !important;
   opacity: 1 !important;
+}
+
+/*--- Channel Typing Dots ---*/
+[class*="typingDots"],
+[class*="dots_"][class*="themed_"],
+[class*="containerDefault"] [class*="typing_"] [class*="dots_"],
+a[data-list-item-id^="channels___"] [class*="typing"] {
+  color: var(--item-unread) !important;
+}
+
+[class*="typingDots"] [class*="dot"],
+[class*="containerDefault"] [class*="typing_"] [class*="dot"],
+a[data-list-item-id^="channels___"] [class*="typing"] [class*="dot"] {
+  background-color: var(--item-unread) !important;
+}
+
+a[data-list-item-id^="channels___"] [class*="typing"] svg,
+a[data-list-item-id^="channels___"] [class*="typing"] svg path {
+  color: var(--item-unread) !important;
+  fill: var(--item-unread) !important;
 }
 
 /*--- Unread Channel Icon ---*/
@@ -254,22 +295,9 @@ a[data-list-item-id^="channels___"][class*="modeUnread"] svg path {
   color: var(--item-accent) !important;
 }
 
-/*--- Unread Channel Name ---*/
+/*--- Unread Channel Name (anchor fallbacks) ---*/
 a[data-list-item-id^="channels___"][class*="modeUnread"] [class*="name"],
 a[data-list-item-id^="channels___"][class*="modeUnread"] [class*="name"] * {
-  color: var(--item-channel-name-unread) !important;
-}
-
-/* Vesktop/Vencord unread (name__2ea32) */
-a[data-list-item-id^="channels___"][class*="modeUnread"] .name__2ea32,
-a[data-list-item-id^="channels___"][class*="modeUnread"] .name__2ea32 * {
-  color: var(--item-channel-name-unread) !important;
-  opacity: 1 !important;
-  font-weight: 600 !important;
-}
-
-li[class*="containerDefault"][class*="modeUnread"] [class*="name"],
-li[class*="containerDefault"][class*="modeUnread"] [class*="name"] * {
   color: var(--item-channel-name-unread) !important;
   opacity: 1 !important;
   font-weight: 600 !important;
