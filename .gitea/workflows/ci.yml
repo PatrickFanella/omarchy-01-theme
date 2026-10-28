@@ -1,0 +1,63 @@
+name: CI
+'on':
+  pull_request:
+    branches:
+    - master
+  push:
+    branches:
+    - master
+permissions:
+  contents: read
+jobs:
+  validate:
+    name: Source validation
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+    - name: Checkout exact PR head
+      uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      with:
+        persist-credentials: false
+        ref: ${{ github.event.pull_request.head.sha || github.sha }}
+    - name: Setup private Python toolchain
+      uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+      with:
+        python-version: '3.13'
+      env:
+        AGENT_TOOLSDIRECTORY: ${{ runner.temp }}/python-tools-${{ github.run_id }}-${{ github.run_attempt }}-${{ github.job }}
+        RUNNER_TOOL_CACHE: ${{ runner.temp }}/python-tools-${{ github.run_id }}-${{ github.run_attempt }}-${{ github.job }}
+    - name: Validate maintained source syntax and TOML
+      shell: bash
+      run: |-
+        set -euo pipefail
+        python3 - <<'PYCODE'
+        from pathlib import Path
+        import subprocess
+        import tomllib
+
+        scripts = {'bash': ['init.sh']}
+        toml_files = ['alacritty.toml', 'colors.toml', 'shell.toml']
+        python_sources = []
+        if not scripts and not toml_files and not python_sources:
+            raise SystemExit("No source-validation inputs configured")
+        for interpreter, files in scripts.items():
+            if not files:
+                raise SystemExit(f"No {interpreter} inputs configured")
+            for filename in files:
+                path = Path(filename)
+                if not path.is_file() or not path.read_bytes():
+                    raise SystemExit(f"Missing or empty shell source: {filename}")
+                subprocess.run([interpreter, "-n", str(path)], check=True)
+        for filename in toml_files:
+            path = Path(filename)
+            if not path.is_file() or not path.read_bytes():
+                raise SystemExit(f"Missing or empty TOML source: {filename}")
+            with path.open("rb") as stream:
+                tomllib.load(stream)
+        for filename in python_sources:
+            path = Path(filename)
+            if not path.is_file() or not path.read_bytes():
+                raise SystemExit(f"Missing or empty Python source: {filename}")
+            compile(path.read_bytes(), str(path), "exec", dont_inherit=True)
+        print(f"Validated {sum(map(len, scripts.values()))} shell sources, {len(toml_files)} TOML files, and {len(python_sources)} Python sources")
+        PYCODE
